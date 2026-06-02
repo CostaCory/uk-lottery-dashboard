@@ -21,5 +21,7 @@ tabs.forEach(tab => {
     const panel = document.getElementById(`panel-${target}`);
     panel.classList.add('active');
     panel.hidden = false;
+
+    window.dispatchEvent(new CustomEvent('tab-shown', { detail: { game: target } }));
   });
 });

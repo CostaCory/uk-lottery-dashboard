@@ -380,6 +380,51 @@ body {
   animation: spin .35s ease;
 }
 
+/* ── EuroMillions ball chips ──────────────────────────────── */
+.ball--em       { background: #003087; }
+.ball--em-cold  { background: #4a90d9; }
+.ball--em-pick  {
+  width: 3rem; height: 3rem; font-size: 1rem;
+  background: #003087;
+  box-shadow: 0 3px 10px rgba(0, 48, 135, .30);
+  animation: ballPop .22s cubic-bezier(.34,1.56,.64,1) both;
+}
+
+.ball--star      { background: #b8860b; }
+.ball--star-cold { background: #daa520; }
+.ball--star-pick {
+  width: 3rem; height: 3rem; font-size: 1rem;
+  background: #b8860b;
+  box-shadow: 0 3px 10px rgba(184, 134, 11, .30);
+  animation: ballPop .22s cubic-bezier(.34,1.56,.64,1) both;
+}
+
+/* ── Lucky Star chart (narrower height) ───────────────────── */
+.chart-wrap--ls {
+  height: 200px;
+  max-width: 560px;
+}
+
+/* ── Card title variants ──────────────────────────────────── */
+.card-title--star      { color: #b8860b; }
+.card-title--star-cold { color: #92780f; }
+
+/* ── EuroMillions suggestion row (main balls + LS) ────────── */
+.suggestion-em {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.suggestion-sep {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-muted);
+  line-height: 1;
+}
+
 /* ── Responsive ───────────────────────────────────────────── */
 @media (max-width: 600px) {
   .tagline { display: none; }
