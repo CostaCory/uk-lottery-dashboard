@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UK Lottery Dashboard</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -57,7 +58,42 @@
         role="tabpanel"
         aria-labelledby="tab-lotto"
       >
-        <p class="placeholder">Lotto content coming in Phase 2.</p>
+        <div class="section-header">
+          <h2 class="section-title">Number Frequency</h2>
+          <span class="draws-count" id="lotto-draws-count"></span>
+        </div>
+
+        <div class="chart-legend">
+          <span class="legend-item"><span class="legend-dot legend-dot--hot"></span>Above average</span>
+          <span class="legend-item"><span class="legend-dot legend-dot--avg"></span>Near average</span>
+          <span class="legend-item"><span class="legend-dot legend-dot--cold"></span>Below average</span>
+        </div>
+
+        <div class="chart-wrap">
+          <canvas id="lotto-freq-chart"></canvas>
+        </div>
+
+        <div class="hot-cold-grid">
+          <div class="hot-cold-card">
+            <h3 class="card-title card-title--hot">🔥 Hot Numbers</h3>
+            <table class="stats-table">
+              <thead>
+                <tr><th>#</th><th>Ball</th><th>Drawn</th><th>Rate</th></tr>
+              </thead>
+              <tbody id="hot-body"></tbody>
+            </table>
+          </div>
+
+          <div class="hot-cold-card">
+            <h3 class="card-title card-title--cold">❄️ Cold Numbers</h3>
+            <table class="stats-table">
+              <thead>
+                <tr><th>#</th><th>Ball</th><th>Drawn</th><th>Rate</th></tr>
+              </thead>
+              <tbody id="cold-body"></tbody>
+            </table>
+          </div>
+        </div>
       </section>
 
       <section
@@ -82,5 +118,6 @@
     </main>
 
     <script src="js/app.js"></script>
+    <script src="js/lotto.js"></script>
   </body>
 </html>
