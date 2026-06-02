@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Firebase
+.firebaserc
+firebase-debug.log
+firestore-debug.log
+
+# Environment
+.env
+.env.local
+
+# Node (if tooling is added later)
+node_modules/
+npm-debug.log*

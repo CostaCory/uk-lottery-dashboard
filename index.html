@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UK Lottery Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">🎱</span>
+          <span class="logo-text">UK Lottery Dashboard</span>
+        </div>
+        <p class="tagline">Draw history, stats &amp; analysis</p>
+      </div>
+    </header>
+
+    <nav class="tab-bar" role="tablist" aria-label="Lottery games">
+      <button
+        class="tab active"
+        role="tab"
+        aria-selected="true"
+        aria-controls="panel-lotto"
+        id="tab-lotto"
+        data-game="lotto"
+      >
+        Lotto
+      </button>
+      <button
+        class="tab"
+        role="tab"
+        aria-selected="false"
+        aria-controls="panel-thunderball"
+        id="tab-thunderball"
+        data-game="thunderball"
+      >
+        Thunderball
+      </button>
+      <button
+        class="tab"
+        role="tab"
+        aria-selected="false"
+        aria-controls="panel-euromillions"
+        id="tab-euromillions"
+        data-game="euromillions"
+      >
+        EuroMillions
+      </button>
+    </nav>
+
+    <main class="content">
+      <section
+        id="panel-lotto"
+        class="game-panel active"
+        role="tabpanel"
+        aria-labelledby="tab-lotto"
+      >
+        <p class="placeholder">Lotto content coming in Phase 2.</p>
+      </section>
+
+      <section
+        id="panel-thunderball"
+        class="game-panel"
+        role="tabpanel"
+        aria-labelledby="tab-thunderball"
+        hidden
+      >
+        <p class="placeholder">Thunderball content coming in Phase 2.</p>
+      </section>
+
+      <section
+        id="panel-euromillions"
+        class="game-panel"
+        role="tabpanel"
+        aria-labelledby="tab-euromillions"
+        hidden
+      >
+        <p class="placeholder">EuroMillions content coming in Phase 2.</p>
+      </section>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
