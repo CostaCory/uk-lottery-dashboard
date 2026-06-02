@@ -1,8 +1,10 @@
 # UK Lottery Dashboard
 
+**Live site:** https://costacory.github.io/uk-lottery-dashboard/
+
 A browser-based dashboard for exploring UK lottery draw history, frequency statistics, and trend analysis across three games: **Lotto**, **Thunderball**, and **EuroMillions**.
 
-Hosted on **GitHub Pages**. Data persisted via **Firebase Firestore** (Phase 2+).
+Hosted on **GitHub Pages**. Data persisted via **Firebase Firestore** (Phase 3+).
 
 ---
 
@@ -10,10 +12,10 @@ Hosted on **GitHub Pages**. Data persisted via **Firebase Firestore** (Phase 2+)
 
 | Phase | Status | Scope |
 |-------|--------|-------|
-| 1 | Done | Project scaffold, layout, tab navigation |
-| 2 | Planned | Draw data import, number frequency charts (Chart.js) |
+| 1 | ✅ Done | Project scaffold, layout, tab navigation |
+| 2 | ✅ Done | Draw data, frequency charts, hot/cold tables, suggested numbers |
 | 3 | Planned | Firebase Firestore integration, real-time updates |
-| 4 | Planned | Advanced stats, hot/cold numbers, jackpot tracker |
+| 4 | Planned | Advanced stats, jackpot tracker |
 
 ---
 
@@ -21,12 +23,18 @@ Hosted on **GitHub Pages**. Data persisted via **Firebase Firestore** (Phase 2+)
 
 ```
 uk-lottery-dashboard/
-├── index.html          # Single-page shell with tab navigation
+├── index.html
 ├── css/
-│   └── styles.css      # Global styles
+│   └── styles.css
 ├── js/
-│   └── app.js          # Tab switching; game logic added in Phase 2
-├── data/               # Static JSON draw data (Phase 2)
+│   ├── app.js              # Tab switching, tab-shown event
+│   ├── lotto.js            # Lotto analysis (3,176 draws, 1994–present)
+│   ├── euromillions.js     # EuroMillions analysis (1,950 draws, 2004–present)
+│   └── thunderball.js      # Thunderball analysis (3,913 draws, 1999–present)
+├── data/
+│   ├── lotto.csv
+│   ├── euromillions.csv
+│   └── thunderball.csv
 ├── .gitignore
 └── README.md
 ```
