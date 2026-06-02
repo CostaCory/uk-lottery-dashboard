@@ -121,7 +121,90 @@
         aria-labelledby="tab-thunderball"
         hidden
       >
-        <p class="placeholder">Thunderball content coming in Phase 2.</p>
+        <!-- Main ball frequency -->
+        <div class="section-header">
+          <h2 class="section-title">Main Ball Frequency</h2>
+          <span class="draws-count" id="tb-draws-count"></span>
+        </div>
+        <div class="chart-legend">
+          <span class="legend-item"><span class="legend-dot" style="background:#f77f00"></span>Above average</span>
+          <span class="legend-item"><span class="legend-dot" style="background:#a0aec0"></span>Near average</span>
+          <span class="legend-item"><span class="legend-dot" style="background:#ffd180"></span>Below average</span>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="tb-main-chart"></canvas>
+        </div>
+
+        <!-- Main ball hot / cold -->
+        <div class="hot-cold-grid">
+          <div class="hot-cold-card">
+            <h3 class="card-title card-title--hot">🔥 Hot Main Balls</h3>
+            <table class="stats-table">
+              <thead><tr><th>#</th><th>Ball</th><th>Drawn</th><th>Rate</th></tr></thead>
+              <tbody id="tb-hot-main"></tbody>
+            </table>
+          </div>
+          <div class="hot-cold-card">
+            <h3 class="card-title card-title--cold">❄️ Cold Main Balls</h3>
+            <table class="stats-table">
+              <thead><tr><th>#</th><th>Ball</th><th>Drawn</th><th>Rate</th></tr></thead>
+              <tbody id="tb-cold-main"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Thunderball frequency -->
+        <div class="section-header" style="margin-top:2rem">
+          <h2 class="section-title">Thunderball Frequency</h2>
+          <span class="draws-count">1 Thunderball drawn from 1–14 each draw</span>
+        </div>
+        <div class="chart-legend">
+          <span class="legend-item"><span class="legend-dot" style="background:#d62828"></span>Above average</span>
+          <span class="legend-item"><span class="legend-dot" style="background:#a0aec0"></span>Near average</span>
+          <span class="legend-item"><span class="legend-dot" style="background:#f4a261"></span>Below average</span>
+        </div>
+        <div class="chart-wrap chart-wrap--ls">
+          <canvas id="tb-ball-chart"></canvas>
+        </div>
+
+        <!-- Thunderball hot / cold -->
+        <div class="hot-cold-grid">
+          <div class="hot-cold-card">
+            <h3 class="card-title card-title--tbhot">⚡ Hot Thunderballs</h3>
+            <table class="stats-table">
+              <thead><tr><th>#</th><th>Ball</th><th>Drawn</th><th>Rate</th></tr></thead>
+              <tbody id="tb-hot-tb"></tbody>
+            </table>
+          </div>
+          <div class="hot-cold-card">
+            <h3 class="card-title card-title--tbcold">⚡ Cold Thunderballs</h3>
+            <table class="stats-table">
+              <thead><tr><th>#</th><th>Ball</th><th>Drawn</th><th>Rate</th></tr></thead>
+              <tbody id="tb-cold-tb"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Suggested numbers -->
+        <div class="suggestions-section">
+          <div class="section-header">
+            <h2 class="section-title">Suggested Numbers</h2>
+          </div>
+          <div class="strategy-buttons" role="group" aria-label="Pick strategy">
+            <button class="strategy-btn tb-strategy-btn active" data-strategy="hot">🔥 Hot Pick</button>
+            <button class="strategy-btn tb-strategy-btn" data-strategy="overdue">⏳ Overdue Pick</button>
+            <button class="strategy-btn tb-strategy-btn" data-strategy="balanced">⚖️ Balanced Pick</button>
+          </div>
+          <div class="suggestion-card">
+            <p class="strategy-desc" id="tb-strategy-desc"></p>
+            <div class="suggestion-em">
+              <div class="suggestion-balls" id="tb-suggestion-main"></div>
+              <span class="suggestion-sep">+</span>
+              <div class="suggestion-balls" id="tb-suggestion-tb"></div>
+            </div>
+            <button class="regenerate-btn" id="tb-regenerate-btn">&#8635; Regenerate</button>
+          </div>
+        </div>
       </section>
 
       <section
@@ -221,5 +304,6 @@
     <script src="js/app.js"></script>
     <script src="js/lotto.js"></script>
     <script src="js/euromillions.js"></script>
+    <script src="js/thunderball.js"></script>
   </body>
 </html>

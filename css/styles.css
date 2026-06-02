@@ -425,6 +425,29 @@ body {
   line-height: 1;
 }
 
+/* ── Thunderball ball chips ───────────────────────────────── */
+.ball--tb       { background: #f77f00; }
+.ball--tb-cold  { background: #ffa94d; }
+.ball--tb-pick  {
+  width: 3rem; height: 3rem; font-size: 1rem;
+  background: #f77f00;
+  box-shadow: 0 3px 10px rgba(247, 127, 0, .30);
+  animation: ballPop .22s cubic-bezier(.34,1.56,.64,1) both;
+}
+
+.ball--tbolt      { background: #d62828; }
+.ball--tbolt-cold { background: #f4a261; }
+.ball--tbolt-pick {
+  width: 3rem; height: 3rem; font-size: 1rem;
+  background: #d62828;
+  box-shadow: 0 3px 10px rgba(214, 40, 40, .30);
+  animation: ballPop .22s cubic-bezier(.34,1.56,.64,1) both;
+}
+
+/* ── Card title Thunderball variants ──────────────────────── */
+.card-title--tbhot  { color: #d62828; }
+.card-title--tbcold { color: #f77f00; }
+
 /* ── Responsive ───────────────────────────────────────────── */
 @media (max-width: 600px) {
   .tagline { display: none; }
